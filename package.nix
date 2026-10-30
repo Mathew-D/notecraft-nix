@@ -23,14 +23,14 @@
 
 stdenv.mkDerivation rec {
   pname = "notecraft";
-  version = "0.0.3.1";
+  version = "0.0.7";
 
   src = appimageTools.extract {
     pname = "notecraft";
     inherit version;
     src = fetchurl {
-      url = "https://github.com/Mathew-D/notecraft/releases/download/v${version}/NoteCraft.AppImage";
-      hash = "sha256-8NWS8IbGSYBpTEDHsDzur4GrfDrUey1lFHpARpUaLKM=";
+      url = "https://github.com/AlienTechSoftware/notecraft/releases/download/v${version}/notecraft-${version}-linux-x86_64.AppImage";
+      hash = "sha256-hBPGLWS+pJVFV6WjHz+1GGaEi6Rg7A8AXRmv0C64QWI=";
     };
   };
 
@@ -75,8 +75,8 @@ stdenv.mkDerivation rec {
 
   meta = with lib; {
     description = "Note taking and organization; an open-source, clean-room reimplementation of Microsoft OneNote, rebuilt in pure Rust";
-    homepage = "https://github.com/Mathew-D/notecraft";
-    license = with licenses; [ mit asl20 ];
+    homepage = "https://github.com/AlienTechSoftware/notecraft";
+    license = with licenses; [ asl20 ];
     platforms = [ "x86_64-linux" ];
     maintainers = [ ];
     mainProgram = "notecraft";
